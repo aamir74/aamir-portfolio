@@ -23,7 +23,7 @@ const greeting = {
   username: "Aamir Ansari",
   title: "Hi all, I'm Aamir",
   subTitle: emoji(
-    "Full-Stack Developer with 4+ years of experience in building scalable web applications and AI-powered solutions using Angular, React, Node.js, and Python. Proven expertise in multilingual NLP, financial data processing, and end-to-end product development 🚀"
+    "Full-Stack Developer with 4+ years of experience building scalable web applications and AI-powered solutions using React, Angular, Node.js, and Python. Proven expertise in agentic AI workflows, real-time voice AI, RAG pipelines, and multilingual NLP, from architecture through end-to-end product delivery 🚀"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1aGQUBEJWnZ4kiC77dWJx4u-Vktrc4Kc_/view?usp=drivesdk", // Set to empty to hide the button
@@ -45,12 +45,15 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "FULL-STACK DEVELOPER WITH EXPERTISE IN AI-POWERED SOLUTIONS AND SCALABLE WEB APPLICATIONS",
+  subTitle:
+    "FULL-STACK DEVELOPER WITH EXPERTISE IN AI-POWERED SOLUTIONS AND SCALABLE WEB APPLICATIONS",
   skills: [
     emoji(
       "⚡ Build scalable web applications with React, Angular, Node.js, and modern JavaScript/TypeScript"
     ),
-    emoji("⚡ Develop AI-driven solutions using RAG pipelines, LLMs, and multilingual NLP models"),
+    emoji(
+      "⚡ Develop AI-driven solutions and agentic AI workflows using Open router, RAG pipelines, LLMs, and multilingual NLP models"
+    ),
     emoji(
       "⚡ Architect microservices and optimize backend performance with Redis, Socket.io, and Docker"
     ),
@@ -153,8 +156,8 @@ const techStack = {
       progressPercentage: "90%"
     },
     {
-      Stack: "AI/NLP & Embeddings",
-      progressPercentage: "75%"
+      Stack: "Agentic AI / LLMs & RAG",
+      progressPercentage: "80%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -166,10 +169,23 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "SDE-2",
+      company: "Autonomix Solutions Inc",
+      // TODO: replace with the Autonomix logo at src/assets/images/autonomix.png
+      companylogo: require("./assets/images/autonomix.jpg"),
+      date: "March 2026 – Present",
+      desc: "Building AI-powered SDR automation across the sales pipeline using OpenRouter, Node.js, and React.",
+      descBullets: [
+        "Built AI-powered SDR workflows using OpenRouter, Node.js, and React, automating lead qualification, email generation, and campaign scheduling across the sales pipeline",
+        "Architected multi-agent OpenRouter workflows for lead qualification and email sequencing, cutting SDR manual touchpoints by 60% across the sales pipeline",
+        "Developed analytics dashboards and backend APIs enabling real-time campaign tracking, lead monitoring, and sales performance reporting"
+      ]
+    },
+    {
       role: "Lead Software Engineer",
       company: "Ez-XBRL Solutions",
       companylogo: require("./assets/images/ezxbrl.png"),
-      date: "October 2022 – Present",
+      date: "October 2022 – February 2026",
       desc: "Leading AI-driven automation and full-stack development for financial data processing solutions.",
       descBullets: [
         "Led AI-driven automation features using RAG pipelines, LLMs, and multilingual embedding models, reducing manual tagging efforts by 70%",
@@ -209,23 +225,52 @@ const bigProjects = {
   subtitle: "FULL-STACK APPLICATIONS SHOWCASING MY DEVELOPMENT SKILLS",
   projects: [
     {
+      image: require("./assets/images/voiceagent.png"),
+      projectName: "Real-Time Voice AI Agent (LiveKit + RAG)",
+      company: "Personal Project",
+      projectDesc:
+        "Real-time voice assistant over WebRTC that transcribes speech, retrieves context from uploaded PDFs, and speaks grounded answers — answers come from your documents, not the model's own knowledge. Built with LiveKit, FastAPI, Groq Whisper (STT), Gemini 2.5 Flash (LLM), Kokoro (TTS), and ChromaDB for RAG, with a React + TypeScript + Vite frontend.",
+      footerLink: [
+        {
+          name: "Demo Video",
+          url: "https://drive.google.com/file/d/1bObxDfRrIg_z69sCHWLHa0KcPfd6OXN_/view?usp=sharing"
+        },
+        {
+          name: "GitHub Repository",
+          url: "https://github.com/aamir74/voice-agent"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/aisdr.png"),
+      projectName: "AI-SDR Platform",
+      company: "Autonomix Solutions Inc",
+      projectDesc:
+        "AI-powered Sales Development Representative platform built with React.js, Node.js, OpenRouter, and LLMs to automate lead qualification, outreach, and sales workflows. Includes agentic AI pipelines for email campaign generation and prospect engagement, plus real-time dashboards, analytics, and third-party integrations for lead tracking and sales performance insights.",
+      footerLink: []
+    },
+    {
       image: require("./assets/images/mlo.png"),
       projectName: "Multilingual Overlay",
-      projectDesc: "AI-powered solution that automatically transfers numeric tags from non-English financial filings to English counterparts using multilingual embeddings, reducing manual tagging time by 70%. Built with Angular, Node.js, and Python.",
-      footerLink: [
-      ]
+      company: "Ez-XBRL Solutions",
+      projectDesc:
+        "AI-powered solution that automatically transfers numeric tags from non-English financial filings to English counterparts using multilingual embeddings, reducing manual tagging time by 70%. Built with Angular, Node.js, and Python.",
+      footerLink: []
     },
     {
       image: require("./assets/images/tagsuggestion.png"),
       projectName: "Financial Tag Suggestions",
-      projectDesc: "Multilingual AI-driven system using RAG to recommend contextual XBRL tags for financial content. Integrates LLMs and multilingual embeddings to deliver high-precision tag suggestions, reducing manual effort by 80%.",
-      footerLink: [
-      ]
+      company: "Ez-XBRL Solutions",
+      projectDesc:
+        "Multilingual AI-driven system using RAG to recommend contextual XBRL tags for financial content. Integrates LLMs and multilingual embeddings to deliver high-precision tag suggestions, reducing manual effort by 80%.",
+      footerLink: []
     },
     {
       image: require("./assets/images/videoLibrary.png"),
       projectName: "Video Library (FlashTube)",
-      projectDesc: "Responsive video streaming webapp built with React, Redux Toolkit, and React Router. Features include filtering, playlists, and watch-later functionality with intuitive design for enhanced user engagement.",
+      company: "Personal Project",
+      projectDesc:
+        "Responsive video streaming webapp built with React, Redux Toolkit, and React Router. Features include filtering, playlists, and watch-later functionality with intuitive design for enhanced user engagement.",
       footerLink: [
         {
           name: "Visit Website",
@@ -236,7 +281,9 @@ const bigProjects = {
     {
       image: require("./assets/images/ecommerce.png"),
       projectName: "Ecommerce WebApp",
-      projectDesc: "Full-stack MERN eCommerce application with RESTful APIs. Features include product browsing, user authentication, cart & order management, and logged-in product reviews. Built with React, Node.js, Express, and MongoDB.",
+      company: "Personal Project",
+      projectDesc:
+        "Full-stack MERN eCommerce application with RESTful APIs. Features include product browsing, user authentication, cart & order management, and logged-in product reviews. Built with React, Node.js, Express, and MongoDB.",
       footerLink: [
         {
           name: "Visit Website",

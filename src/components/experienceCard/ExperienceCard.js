@@ -17,6 +17,18 @@ export default function ExperienceCard({cardInfo, isDark}) {
       : "rgb(" + values.join(", ") + ")";
   }
 
+  // Pick a readable company-name color based on how light the banner is.
+  // ColorThief can return a near-white dominant color for logos on white
+  // backgrounds, which would make the default white text invisible.
+  function getCompanyTextColor(values) {
+    if (typeof values === "undefined" || values.length < 3) {
+      return undefined;
+    }
+    const [r, g, b] = values;
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    return luminance > 0.6 ? "#1a1a1a" : undefined;
+  }
+
   const GetDescBullets = ({descBullets, isDark}) => {
     return descBullets
       ? descBullets.map((item, i) => (
@@ -35,7 +47,12 @@ export default function ExperienceCard({cardInfo, isDark}) {
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h5
+            className="experience-text-company"
+            style={{color: getCompanyTextColor(colorArrays)}}
+          >
+            {cardInfo.company}
+          </h5>
         </div>
 
         <img
