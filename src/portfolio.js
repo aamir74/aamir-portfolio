@@ -23,7 +23,7 @@ const greeting = {
   username: "Aamir Ansari",
   title: "Hi all, I'm Aamir",
   subTitle: emoji(
-    "Full-Stack Developer with 4+ years of experience building scalable web applications and AI-powered solutions using React, Angular, Node.js, and Python. Proven expertise in agentic AI workflows, real-time voice AI, RAG pipelines, and multilingual NLP, from architecture through end-to-end product delivery 🚀"
+    "Full-Stack Developer with 5 years of experience building scalable web applications and AI-powered solutions using React, Angular, Node.js, and Python. Proven expertise in agentic AI workflows, real-time voice AI, RAG pipelines, and multilingual NLP, from architecture through end-to-end product delivery 🚀"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1aGQUBEJWnZ4kiC77dWJx4u-Vktrc4Kc_/view?usp=drivesdk", // Set to empty to hide the button

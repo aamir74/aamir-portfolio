@@ -2,7 +2,7 @@ Thane, Maharashtra, India
 Aamir Ansari
 github.com/aamir74 sabriaamir74@gmail.com 8286237776 in/aamir-ansari-63a7a41a4
 SUMMARY
-Full-Stack Developer with 4+ years of experience in building scalable web applications and AI-powered solutions using
+Full-Stack Developer with 5 years of experience in building scalable web applications and AI-powered solutions using
 Angular, React, Node.js, and Python. Proven expertise in multilingual NLP, financial data processing, and end-to-end
 product development, with a strong focus on performance, usability, and automation.
 EXPERIENCE
